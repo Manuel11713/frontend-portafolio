@@ -1,0 +1,56 @@
+#content-container{
+    background:#625cc7;
+    transition: all 0.5s;
+}
+#name-title{
+    background-color: #fff;
+    height: 200px;  
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+}
+.avatar-img{
+    // bottom: -100px;
+    
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    box-shadow: 0px 0px 41px 0px rgba(122,122,122,1);
+
+    animation: appear 0.5s linear forwards;
+
+}
+.avatar-img .anticon{
+    display: flex;
+}
+.avatar-img svg{
+    align-self: center;
+}
+#container-resume{
+    display: flex;
+    justify-content: space-around;
+    animation: appearResume 0.5s linear forwards;
+}
+.name{
+    color: #fff;
+    padding-left: 20px;
+    font-size: 4em;
+}
+
+
+@keyframes appearResume{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes appear{
+    from{bottom: 200px;opacity: 0;}
+    to{bottom: -50px;opacity: 1;}
+}
+
+// background-image: url('./homebg.jpeg') ;
+// background-size: cover;
+// background-repeat: no-repeat;;
