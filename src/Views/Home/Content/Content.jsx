@@ -1,22 +1,16 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import './Content.scss';
 
-import {UserOutlined} from '@ant-design/icons';
-import {Avatar } from 'antd';
+import {UserOutlined, SettingFilled,ArrowLeftOutlined  } from '@ant-design/icons';
+import {Avatar} from 'antd';
 
 // const icons = ["antd.png","aws.png","bootstrap.jpg","css.png","git.png","heroku.jpg","html.png","js.png","jupyter.png","linux.jpg",
 // "mongo.png","mysql.png","node.jpg","python.jpg","pytorch.png","react.png","redux.png","sass.png",""];
 
 const Content = ({sideBarActive}) =>{
-    // const [image,setImage] = useState('antd.png');
-    // let count = 1;
-    // useEffect(()=>{
-    //     setInterval(()=>{
-    //         setImage(icons[count%icons.length]);
-    //         count++;
-    //     },2000);
-    // },[count]);
+    
 
     return(
         <header id="content-container" style={{marginLeft:sideBarActive?250:100}} >
@@ -31,8 +25,10 @@ const Content = ({sideBarActive}) =>{
                     <h1 className="name">Hi.</h1>
                     <h1 className="name">I'm Manuel</h1>
                     <h1 className="name">I'm Full Stack Developer</h1>
+                    <Link to="/contact" className="contact-me">Contact Me</Link><ArrowLeftOutlined className="contact-arrow"/>
                 </div>
                 <div id="description">
+                    <SettingFilled />
                 </div>
             </div>
             

@@ -39,6 +39,39 @@
     padding-left: 20px;
     font-size: 4em;
 }
+#description{
+    color: #fff;
+    align-self: center;
+    font-size: 150px;
+    animation: rotate linear 2s infinite;
+}
+
+
+.contact-me{
+    font-size: 30px;
+    padding: 15px;
+    outline: none;
+    color: #fff;
+    border: 1px solid #fff;
+    background:rgba(0,0,0,0);
+}
+.contact-me:active{
+    outline: none;
+}
+.contact-arrow{
+    position: relative;
+    color: #fff;
+    font-size: 40px;
+    animation: zigzag 2s linear infinite alternate;
+}
+@keyframes zigzag{
+    from{right: -30px;}
+    to{right: 0;}
+}
+@keyframes rotate{
+    from{transform: rotate(0DEG);}
+    to{transform: rotate(360DEG);}
+}
 
 
 @keyframes appearResume{
