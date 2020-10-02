@@ -1,0 +1,80 @@
+.container-about{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    color: #fff;
+}
+#set1,#set2{
+    position: absolute;
+    font-size: 90px;
+
+    animation: roll 3s infinite linear;
+}
+@keyframes roll{
+    from{transform: rotate(0DEG);}
+    to{transform: rotate(360DEG);}
+}
+#set1{
+    left: 100px;
+    top: 100px;
+}
+#set2{
+    right: 200px;
+    top:300px;
+}
+
+.me{
+    padding: 100px;
+}
+.me-description{
+    font-size: 20px;
+    max-width: 500px;
+}
+#imgbg-container{
+    padding-top: 100px;
+    width: 500px;
+}
+#imgbg-container img{
+    width: 100%;
+}
+
+#card-edu-img{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    animation: appearcardimg 1s linear forwards;
+}
+@keyframes appearcardimg{
+    from{bottom: -200px;opacity: 0;}
+    to{bottom: 0px;opacity: 1;}
+}
+#card-edu-img img{
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    transition: all 0.5s;
+}
+.card-education img:hover{
+    transform: scale(1.1);
+}
+.card-education img:hover+span{    
+    opacity: 1;
+}
+#education{
+    margin-top: 50px;
+}
+.card-education{
+    position: relative;
+}
+.descrip-edu{
+    opacity: 0;
+    left: 0;
+    padding:10px;
+    color: #333;
+    top: 120px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 5px;
+
+    transition: all 1s;
+}

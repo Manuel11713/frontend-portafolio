@@ -16,7 +16,7 @@ const Carousel = () =>{
     // const [active,setActive] = useState(0);
     const [count,setCount] = useState(0);
     const restCount = () =>{
-        if(count===0)return;
+        if(count===0)return setCount(4);
         setCount(count-1);
     }
     const plusCount = () =>{
