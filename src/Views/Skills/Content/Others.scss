@@ -1,10 +1,14 @@
-#FL-container h2,h3{
+#oth-container h2,h3{
     text-align: center;
 }
-.fl{
+.oth{
     display: flex;
     justify-content: space-around;
 }
-#FL-container div img{
+#oth-container div img{
     width: 80px;
+}
+#gulp{
+    width: 70px;
+    height: 100px;
 }

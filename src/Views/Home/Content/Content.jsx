@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import './Content.scss';
 
-import {UserOutlined, SettingFilled,ArrowLeftOutlined  } from '@ant-design/icons';
+import {SettingFilled,ArrowLeftOutlined  } from '@ant-design/icons';
 import {Avatar} from 'antd';
 
 // const icons = ["antd.png","aws.png","bootstrap.jpg","css.png","git.png","heroku.jpg","html.png","js.png","jupyter.png","linux.jpg",
@@ -16,7 +16,7 @@ const Content = ({sideBarActive}) =>{
         <header id="content-container" style={{marginLeft:sideBarActive?250:100}} >
             
             <section id="name-title">
-                <Avatar className="avatar-img" size={200} icon={<UserOutlined />} />
+                <Avatar className="avatar-img" size={200}  />
 
             </section>  
             <div id="container-resume">

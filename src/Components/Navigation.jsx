@@ -6,6 +6,7 @@ import {
     MailOutlined,
     LeftOutlined,
     RightOutlined,
+    HomeOutlined,
     StarOutlined,
     UserOutlined
 } from '@ant-design/icons';
@@ -27,6 +28,11 @@ const Navigation = ({sideBarActive,setBarActive}) =>{
                 </li>}
 
                 <Link to="/">
+                    <li className="links">
+                        <HomeOutlined className="icon-menu"/>{sideBarActive?<span className="descrip">About</span>:null}
+                    </li>
+                </Link>
+                <Link to="/about">
                     <li className="links">
                         <UserOutlined className="icon-menu"/>{sideBarActive?<span className="descrip">About</span>:null}
                     </li>

@@ -7,10 +7,6 @@ const Content = ({sideBarActive}) =>{
     return(
         <main id="content-container" style={{marginLeft:sideBarActive?250:100}} >
             <Carousel/>
-            <div id="education-container">
-                <h1 className="title"> Education</h1>
-            </div>
-
         </main>
     );
 }
