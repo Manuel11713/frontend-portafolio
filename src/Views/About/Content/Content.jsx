@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import './Content.scss';
 import {SettingFilled} from '@ant-design/icons';
-import { useState } from 'react';
 
 const Content = ({sideBarActive}) =>{
   
