@@ -1,0 +1,37 @@
+.imgwork-container{
+    position: relative;
+    overflow: hidden;
+}
+.links-works{
+    position: absolute;
+    background-color: rgba(0,0,0,0.9);
+    width: 100%;
+    border-radius: 0 0 10px 20px;
+
+    bottom:-300px; 
+    //bottom: 0;
+    height: 50%;
+    transition: all 0.2s linear;
+
+    display: flex;
+    justify-content: space-around;
+}
+.img-work{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.imgwork-container:hover{
+    .links-works{
+        bottom: 0px !important;
+    }
+}
+.see-work, .github-work{
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    align-self: center;
+}
+.title-work{
+    color: #fff;
+}

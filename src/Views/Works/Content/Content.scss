@@ -1,0 +1,21 @@
+#works-container{
+    transition: all 0.5s;
+    padding-left: 10px;;
+}
+
+.row{
+    display: grid;
+    gap: 20px;
+    grid-template-rows: auto;
+}
+
+@media only screen and (max-width:500px){
+    .row{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media only screen and (min-width:768px){
+    .row{
+        grid-template-columns: repeat(2,1fr);
+    } 
+}  
