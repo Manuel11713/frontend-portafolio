@@ -33,28 +33,28 @@ const Navigation = ({sideBarActive,setBarActive}) =>{
                 </li>}
 
                 <Link to="/">
-                    <li className="links">
-                        <HomeOutlined className={`icon-menu ${location.pathname==='/'?'active-path':null}`}/>{sideBarActive?<span className="descrip">About</span>:null}
+                    <li className={`links ${location.pathname==='/'?'active-path':null}`}>
+                        <HomeOutlined className={`icon-menu `}/>{sideBarActive?<span className="descrip">About</span>:null}
                     </li>
                 </Link>
                 <Link to="/about">
-                    <li className="links">
-                        <UserOutlined className={`icon-menu ${location.pathname==='/about'?'active-path':null}`}/>{sideBarActive?<span className="descrip">About</span>:null}
+                    <li className={`links ${location.pathname==='/about'?'active-path':null}`}>
+                        <UserOutlined className={`icon-menu`}/>{sideBarActive?<span className="descrip">About</span>:null}
                     </li>
                 </Link>
                 <Link to="/skills">
-                    <li className="links">
-                        <StarOutlined className={`icon-menu ${location.pathname==='/skills'?'active-path':null}`}/>{sideBarActive?<span className="descrip">Skills</span>:null}
+                    <li className={`links ${location.pathname==='/skills'?'active-path':null}`}>
+                        <StarOutlined className={`icon-menu `}/>{sideBarActive?<span className="descrip">Skills</span>:null}
                     </li>
                 </Link>
                 <Link to="/works">
-                    <li className="links">
-                        <FolderOutlined className={`icon-menu ${location.pathname==='/works'?'active-path':null}`}/>{sideBarActive?<span className="descrip">Works</span>:null}
+                    <li className={`links ${location.pathname==='/works'?'active-path':null}`}>
+                        <FolderOutlined className={`icon-menu `}/>{sideBarActive?<span className="descrip">Works</span>:null}
                     </li>
                 </Link>
                 <Link to="/contact">
-                    <li className="links">
-                        <MailOutlined className={`icon-menu ${location.pathname==='/contact'?'active-path':null}`}/>{sideBarActive?<span className="descrip">Contact</span>:null}
+                    <li className={`links ${location.pathname==='/contact'?'active-path':null}`}>
+                        <MailOutlined className={`icon-menu `}/>{sideBarActive?<span className="descrip">Contact</span>:null}
                     </li>
                 </Link>
             </ul>

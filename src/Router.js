@@ -7,7 +7,7 @@ import About from './Views/About/About';
 import Works from './Views/Works/Works';
 import Skills from './Views/Skills/Skills';
 import Contact from './Views/Contact/Contact';
-
+import Certifieds from './Views/Certifieds/Certifieds';
 const Router = () =>{
     return(
         <BrowserRouter>
@@ -17,6 +17,11 @@ const Router = () =>{
                 <Route exact path="/skills" component={Skills} />
                 <Route exact path="/works" component={Works}/>
                 <Route exact path="/contact" component={Contact} />
+                <Route exact path="/certifieds/:path" render={(props)=>{
+                    const {path} = props.match.params;
+                    return(
+                        <Certifieds path={path}/>
+                    )}}/>
             </Switch>
         </BrowserRouter>
     );

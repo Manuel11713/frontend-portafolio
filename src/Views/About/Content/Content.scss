@@ -21,7 +21,7 @@
 }
 #set2{
     right: 200px;
-    top:600px;
+    bottom: 100px;
 }
 
 .me{
@@ -32,7 +32,7 @@
     text-align: center;
 }
 .me-description{
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     justify-content: center;
 }
@@ -58,7 +58,6 @@
     to{bottom: 0px;opacity: 1;}
 }
 #card-edu-img img{
-    cursor: pointer;
     width: 100px;
     height: 100px;
     transition: all 0.5s;
@@ -69,29 +68,33 @@
 .card-education img:hover+span{    
     opacity: 1;
 }
-#education{
+#education-title{
     margin-top: 50px;
 }
-.card-education{
-    position: relative;
-}
-.descrip-edu{
-    opacity: 0;
-    left: 0;
-    padding:10px;
-    color: #333;
-    top: 120px;
-    position: absolute;
-    background-color: #fff;
-    border-radius: 5px;
+#education{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 
-    transition: all 1s;
 }
-
+.education-img{
+    width: 100px;
+    height: 100px;
+}
+.education-card{
+    padding: 20px;
+    display: flex;
+} 
+.certified{
+    color: #ff9800;
+}
 @media only screen and (max-width:500px){
     #set1, #set2{
         font-size: 70px;
     }
-    
-    
+    #education{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .education-card{
+        padding:0px
+    }
 }
