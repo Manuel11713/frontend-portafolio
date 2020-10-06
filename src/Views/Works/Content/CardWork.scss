@@ -2,6 +2,20 @@
     position: relative;
     overflow: hidden;
 }
+.imgwork-container:nth-child(odd){
+    animation: appearOdd 0.5s linear forwards;
+}
+@keyframes appearOdd{
+    from{opacity: 0; left: -200px;}
+    to{opacity: 1; left: 0;}
+}
+.imgwork-container:nth-child(even){
+    animation: appearEven 0.5s linear forwards;
+}
+@keyframes appearEven{
+    from{opacity: 0; right: -200px;}
+    to{opacity: 1; right: 0;}
+}
 .links-works{
     position: absolute;
     background-color: rgba(0,0,0,0.9);

@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import Swal from 'sweetalert2';
 import './Content.scss';
 import axios from 'axios';
+import {useMediaQuery} from '@react-hook/media-query'
+
 
 import ContactIcons from './ContactIcons';
 
@@ -11,6 +13,11 @@ const Content = ({sideBarActive}) =>{
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
+
+    const notPhone = useMediaQuery('only screen and (min-width: 500px)');
+    let marginL=0;
+    if(notPhone && sideBarActive)marginL=250;
+    else if(notPhone && !sideBarActive)marginL=100;
 
     const handleSubmit = async (e) =>{
         const endPoint  = "https://formspree.io/f/moqpvbbp";
@@ -37,7 +44,7 @@ const Content = ({sideBarActive}) =>{
         }
     }
     return(
-        <main id="form-container" style={{marginLeft:sideBarActive?250:100}} >
+        <main id="form-container" style={{marginLeft:marginL}} >
             <div id="methods">
                 <h3>Contact Me</h3>
                 <form onSubmit={handleSubmit}>

@@ -26,7 +26,7 @@ const Carousel = () =>{
     return(
         <div>
             <h1 className="title">Skills</h1>
-            <div id="carousel-container">
+            <div id="carousel-container" onClick={plusCount}>
                 <div className="button-slide" >
                         <LeftOutlined className="icon-slides" onClick={restCount}/>
                 </div>

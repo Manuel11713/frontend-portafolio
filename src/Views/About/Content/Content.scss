@@ -3,6 +3,7 @@
     position: relative;
     justify-content: space-around;
     color: #fff;
+    overflow: hidden;
 }
 #set1,#set2{
     position: absolute;
@@ -24,10 +25,18 @@
 }
 
 .me{
-    padding: 100px;
+    padding: 100px 20px;
+    width: 100%;
+}
+.me h1{
+    text-align: center;
 }
 .me-description{
     font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+.me-description span{
     max-width: 500px;
 }
 #imgbg-container{
@@ -77,4 +86,12 @@
     border-radius: 5px;
 
     transition: all 1s;
+}
+
+@media only screen and (max-width:500px){
+    #set1, #set2{
+        font-size: 70px;
+    }
+    
+    
 }

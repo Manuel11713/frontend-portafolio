@@ -26,7 +26,7 @@ const ModalWork = ({images,setVisible, visible}) =>{
                 <LeftOutlined />
             </div>
             <div className="carousel-modal-container" onClick={plusCount}>
-                <img className="img-modal-work" src={images[count%images.length]}/>
+                <img className="img-modal-work" src={images[count%images.length]} alt="descrip"/>
             </div>
             <div className="icon-modal-carousel" onClick={plusCount}>
                 <RightOutlined />

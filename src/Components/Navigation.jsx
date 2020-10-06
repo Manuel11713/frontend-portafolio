@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
+import {Link,useLocation} from 'react-router-dom';
 import {
     FolderOutlined,
     MailOutlined,
@@ -14,6 +14,11 @@ import {
 import './Navigation.scss';
 
 const Navigation = ({sideBarActive,setBarActive}) =>{
+    let location = useLocation();
+    //location.pathname
+    //#64dd17
+    
+
     return(
         
         <nav id="navigation-container" style={{width:sideBarActive?250:100}}>
@@ -29,27 +34,27 @@ const Navigation = ({sideBarActive,setBarActive}) =>{
 
                 <Link to="/">
                     <li className="links">
-                        <HomeOutlined className="icon-menu"/>{sideBarActive?<span className="descrip">About</span>:null}
+                        <HomeOutlined className={`icon-menu ${location.pathname==='/'?'active-path':null}`}/>{sideBarActive?<span className="descrip">About</span>:null}
                     </li>
                 </Link>
                 <Link to="/about">
                     <li className="links">
-                        <UserOutlined className="icon-menu"/>{sideBarActive?<span className="descrip">About</span>:null}
+                        <UserOutlined className={`icon-menu ${location.pathname==='/about'?'active-path':null}`}/>{sideBarActive?<span className="descrip">About</span>:null}
                     </li>
                 </Link>
                 <Link to="/skills">
                     <li className="links">
-                        <StarOutlined className="icon-menu"/>{sideBarActive?<span className="descrip">Skills</span>:null}
+                        <StarOutlined className={`icon-menu ${location.pathname==='/skills'?'active-path':null}`}/>{sideBarActive?<span className="descrip">Skills</span>:null}
                     </li>
                 </Link>
                 <Link to="/works">
                     <li className="links">
-                        <FolderOutlined className="icon-menu"/>{sideBarActive?<span className="descrip">Works</span>:null}
+                        <FolderOutlined className={`icon-menu ${location.pathname==='/works'?'active-path':null}`}/>{sideBarActive?<span className="descrip">Works</span>:null}
                     </li>
                 </Link>
                 <Link to="/contact">
                     <li className="links">
-                        <MailOutlined className="icon-menu"/>{sideBarActive?<span className="descrip">Contact</span>:null}
+                        <MailOutlined className={`icon-menu ${location.pathname==='/contact'?'active-path':null}`}/>{sideBarActive?<span className="descrip">Contact</span>:null}
                     </li>
                 </Link>
             </ul>

@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import './Content.scss';
+import {useMediaQuery} from '@react-hook/media-query'
 
 import {SettingFilled,ArrowLeftOutlined  } from '@ant-design/icons';
 import {Avatar} from 'antd';
@@ -11,13 +12,17 @@ import {Avatar} from 'antd';
 
 const Content = ({sideBarActive}) =>{
     
+    
+    const notPhone = useMediaQuery('only screen and (min-width: 500px)');
+    let marginL=0;
+    if(notPhone && sideBarActive)marginL=250;
+    else if(notPhone && !sideBarActive)marginL=100;
 
     return(
-        <header id="content-container" style={{marginLeft:sideBarActive?250:100}} >
+        <header id="content-container" style={{marginLeft:marginL}} >
             
             <section id="name-title">
                 <Avatar className="avatar-img" size={200}  />
-
             </section>  
             <div id="container-resume">
 

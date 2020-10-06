@@ -1,12 +1,18 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import './Content.scss';
+import {useMediaQuery} from '@react-hook/media-query'
+
 import {SettingFilled} from '@ant-design/icons';
 
 const Content = ({sideBarActive}) =>{
-  
+    const notPhone = useMediaQuery('only screen and (min-width: 500px)');
+    let marginL=0;
+    if(notPhone && sideBarActive)marginL=250;
+    else if(notPhone && !sideBarActive)marginL=100;
+
     return(
-        <header id="content-container" className="container-about" style={{marginLeft:sideBarActive?250:100}} >
+        <header id="content-container" className="container-about" style={{marginLeft:marginL}} >
             <div id="set1">
                     <SettingFilled />
             </div>
@@ -16,8 +22,10 @@ const Content = ({sideBarActive}) =>{
             <div className="me">
                 <h1>About Me</h1>
                 <div className="me-description">
-                    Hi, I'm Manuel, i studied Mechatronical Engineering at UNAM, I love to make great things with the newest 
-                    technologies, I'm a self-taught person since last 5 years, I want to become a certified architect of AWS. 
+                    <span>
+                        Hi, I'm Manuel, i studied Mechatronical Engineering at UNAM, I love to make great things with the newest 
+                        technologies, I'm a self-taught person since last 5 years, I want to become a certified architect of AWS. 
+                    </span>
                 </div>
 
                 <h1 id="education">Education</h1>

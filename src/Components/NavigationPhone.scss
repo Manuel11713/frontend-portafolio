@@ -1,0 +1,28 @@
+#navPhone-container{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    transition: all 0.5s;
+    background: #554fb1;
+    border-top: 1px solid rgb(137, 137, 143) ;
+    z-index: 10;
+    width: 100%;
+}
+
+#container-links-phone{
+    width: 100%;
+    padding: 0;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+#container-links-phone li{
+    display: inline;
+    margin: 0;
+}
+@media only screen and (min-width: 500px){
+    #navPhone-container{
+        display: none;
+    }
+}

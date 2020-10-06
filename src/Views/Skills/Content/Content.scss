@@ -1,49 +1,7 @@
-#education-container{
-    
+.skills-container{
+    overflow: hidden;
 }
-
 .title{
     color: #fff;
     text-align: center;
-}
-#carousel-container{
-
-    display: flex;
-    justify-content: center;
-}
-#slides-container{
-    min-width:800px;
-    height: 400px;
-    padding: 20px;
-    position: relative;
-    background: #fff;
-    border-radius: 10px;
-
-    position: relative;
-    animation: appearcontainer 1s linear forwards;
-}
-
-.button-slide{
-    display: flex;
-}
-.icon-slides{
-    align-self: center;
-    padding: 10px;
-    font-size: 80px;
-    color:#625cc7;
-    background-color: #fff;
-    border-radius: 50%;
-    margin: 0 10px;
-
-    cursor: pointer;
-    position: relative;
-    animation: appearicons 1s linear forwards;
-}
-@keyframes appearcontainer{
-    from{bottom: 200px; opacity: 0;}
-    to{bottom: 0; opacity:1;}
-}
-@keyframes appearicons{
-    from{bottom: -200px; opacity: 0;}
-    to{bottom: 0; opacity:1;}
 }
